@@ -43,7 +43,7 @@ public class Orden {
                 case CONTADO:
                     return total*0.95;
                 case CREDITO:
-                    return total*0.9;
+                    return total*1.10;
             }
         }
 
