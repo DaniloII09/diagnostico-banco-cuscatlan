@@ -39,12 +39,7 @@ public class Orden {
         }
 
         if(cliente != null) {
-            switch (cliente.getTipoPago()) {
-                case CONTADO:
-                    return total*0.95;
-                case CREDITO:
-                    return total*1.10;
-            }
+            return total + total*cliente.getTipoPago().getAjuste();
         }
 
         return total;
